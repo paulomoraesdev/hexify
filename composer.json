@@ -1,0 +1,33 @@
+{
+  "name": "paulomoraesdev/hexify",
+  "description": "Hexify is a web microframework created to be used as an API starter kit.",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Hexify\\": "src/"
+    },
+    "files": [
+      "framework/Support/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Paulo Moraes",
+      "email": "accounts@paulomoraes.dev"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+      "squizlabs/php_codesniffer": "^3.7",
+      "phpstan/phpstan": "^1.10"
+  },
+  "scripts": {
+      "lint": "phpcs",
+      "lint:fix": "phpcbf",
+      "analyse": "phpstan analyse",
+      "quality": [
+          "@lint",
+          "@analyse"
+      ]
+  }
+}
